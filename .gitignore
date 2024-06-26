@@ -1,0 +1,5 @@
+venv/
+*.pyc
+gunicorn-error-log
+static/
+local_settings.py

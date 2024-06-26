@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Cardados - Template vistoria{% endblock %}
+
+{% block content %}
+<h1>Adicionar template de vistoria</h1>
+<form method="post" class="needs-validation" novalidate>
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-success mt-3">Salvar</button>
+</form>
+
+<!-- <h2 class="mt-5">Templates</h2>
+<ul>
+    {% for template in templates %}
+    <li>{{ template.name }}</a></li>
+    {% endfor %}
+</ul> -->
+
+{% endblock %}

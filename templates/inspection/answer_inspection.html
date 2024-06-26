@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Cardados - Respostas da Vistoria{% endblock %}
+
+{% block content %}
+<h1>Respostas da Vistoria ({{inspection_name}})</h1>
+<form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ formset.management_form }}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-success mt-3">Salvar</button>
+</form>
+{% endblock %}

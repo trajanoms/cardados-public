@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Cardados - Grupos{% endblock %}
+
+{% block content %}
+<h1>Adicionar Grupo</h1>
+<form method="post" class="needs-validation" novalidate>
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-success mt-3">Salvar</button>
+</form>
+
+
+{% endblock %}
